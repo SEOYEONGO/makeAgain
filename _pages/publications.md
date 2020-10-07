@@ -9,9 +9,9 @@ nav: true
 
 <div class="publications">
 
-{% raw %}{% for y in page.years %}{% endraw %}
+{% for y in page.years %}
   <h2 class="year">{{y}}</h2>
-  {% raw %}{% bibliography -f papers -q @*[year={{y}}]* %}{% endraw %}
-{% raw %}{% endfor %}{% endraw %}
+  {% bibliography -f papers -q @*[year={{y}}]*%}
+{% endfor %}
 
 </div>
